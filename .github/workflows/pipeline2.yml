@@ -1,0 +1,16 @@
+name: CI/CD Pipeline 2
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  build-deploy:
+    runs-on: runner-2 
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      
+      - name: Run Pipeline 2
+        run: echo "Running on Runner 2"
